@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  
+  --color-neon-green: #39FF14;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .neon-text {
+    @apply text-neon-green;
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+  }
+
+  .neon-border {
+    @apply border border-neon-green;
+    box-shadow: 0 0 10px #39FF14;
+  }
+
+  .neon-btn {
+    @apply border-2 border-neon-green text-neon-green transition-all duration-300 hover:bg-neon-green hover:text-black hover:shadow-[0_0_20px_#39FF14];
+  }
+
+  .glass-nav {
+    @apply bg-black/80 backdrop-blur-md;
+  }
+}
